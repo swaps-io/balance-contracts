@@ -1,0 +1,21 @@
+{
+  "name": "balance-contracts",
+  "description": "Balance Contracts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "h": "hardhat",
+    "hc": "hardhat compile",
+    "ht": "hardhat test",
+    "htg": "hardhat test --grep",
+    "hi": "hardhat ignition",
+    "hid": "hardhat ignition deploy"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.12",
+    "hardhat-contract-sizer": "^2.10.0"
+  }
+}
