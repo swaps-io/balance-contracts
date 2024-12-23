@@ -13,8 +13,9 @@ const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY || EMPTY_PRIVATE_K
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.27',
+    version: '0.8.28',
     settings: {
+      viaIR: true,
       optimizer: {
         enabled: true,
         runs: 1_000_000,

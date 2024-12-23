@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity ^0.8.27;
+pragma solidity ^0.8.28;
 
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
@@ -13,7 +13,7 @@ contract BalanceCollector {
     uint256 private constant SKIP_BIT = (1 << 255);
 
     function getBalances(address account_, address[] calldata tokens_) external view returns (uint256[] memory balances) {
-        if (tokens_.length > MAX_TOKENS) revert TooManyTokens(tokens_.length, MAX_TOKENS);
+        require(tokens_.length <= MAX_TOKENS, TooManyTokens(tokens_.length, MAX_TOKENS));
 
         balances = new uint256[](tokens_.length + 1);
         balances[0] = account_.balance;
