@@ -18,7 +18,7 @@ const config: HardhatUserConfig = {
       viaIR: true,
       optimizer: {
         enabled: true,
-        runs: 1_000_000,
+        runs: 100,
       },
     },
   },
@@ -47,6 +47,7 @@ const config: HardhatUserConfig = {
     strict: true,
     only: [
       'contracts/BalanceCollector.sol',
+      'contracts/BalanceCollector2.sol',
     ],
   },
 };
